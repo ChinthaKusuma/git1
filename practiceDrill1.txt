@@ -1,0 +1,95 @@
+1>Create the following directory structure. (Create empty files where necessary)
+
+hello
+├── five
+│   └── six
+│       ├── c.txt
+│       └── seven
+│           └── error.log
+└── one
+    ├── a.txt
+    ├── b.txt
+    └── two
+        ├── d.txt
+        └── three
+            ├── e.txt
+            └── four
+                └── access.log
+
+Commands:
+1.mkdir hello
+2.cd hello
+3.mkdir five
+4.cd five
+5.mkdir six
+6.cd six
+7.touch c.txt
+8.mkdir seven
+9.cd seven 
+10.touch error.log
+11.cd ~/hello
+12.mkdir one
+13.cd one
+14.touch a.txt
+15.touch b.txt
+16.mkdir two
+17.cd two
+18.touch d.txt
+19.mkdir three
+20.cd three
+21.touch e.txt
+22.mkdir four
+23.cd four
+24/touch access.log
+
+Explanation:
+mkdir:This command is used to create directories
+cd:This command is used to change directory
+touch:This command is used to create file
+cd ~:This command is used to navigate to home directory
+
+2>Delete all the files having the .log extension
+
+Command:
+find . -name "*.log" -exec rm {} \;
+
+Explanation:
+find:start searching files in the current directory
+-name "*.log":Matches the files with the specified extension
+-exec:For each file found,execute the command that follows
+rm {}:rm is the command to remove each file,and {} is a place holder for each file found.
+\;end the -exec command.
+
+3>Add the following content to a.txt
+
+commands:
+1.cd hello/one
+2.nano a.txt
+3.write content
+
+Explanation:
+cd:Change directory
+nano:Text editor
+
+4>Delete the directory named five
+1.cd ..
+2rm -R five
+
+Explanation:
+cd ..:Change to parent directory
+rm -R:Remove Directory that even contain sub-directories or files
+ 
+5>Rename the one directory to uno
+
+1.cd one
+2.mv one uno
+
+Explanation:
+mv:This command is used to rename directories
+
+6>Move a.txt to the two directory
+
+1.mv a.txt two
+
+Explanation:
+mv:This command is also used to move files or directories
